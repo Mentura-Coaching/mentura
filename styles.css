@@ -1,3 +1,4 @@
+
 /* styles.css */
 
 /* Tailwind CSS CDN ya está incluido en el HTML, no es necesario agregarlo aquí */
@@ -16,3 +17,17 @@
     max-height: 80vh; /* Limita la altura máxima del modal al 80% del viewport */
     overflow-y: auto; /* Añade un scrollbar si el contenido es demasiado alto */
 }
+
+.bg-custom-blue {
+    background-color: #304152;
+}
+
+.text-custom-blue {
+    color: #304152;
+}
+
+.text-custom-elegant {
+    color: #306583; 
+}
+
+
