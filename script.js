@@ -1,4 +1,3 @@
-
 /* script.js */
 
 /* Funciones para abrir y cerrar los modales */
