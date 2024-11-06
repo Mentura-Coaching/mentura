@@ -1,0 +1,997 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentura</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Feather Icons CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="bg-blue-900 text-white py-20">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-bold mb-4">Mentura</h1>
+            <p class="text-xl text-blue-200">Coaching y automatización de negocios</p>
+        </div>
+    </header>
+
+    <!-- Problemas Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">¿Tu empresa necesita ayuda para crecer?</h2>
+            <p class="text-lg text-gray-600 mb-8 text-center">Si te identificas con alguna de estas situaciones, es momento de actuar:</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Problema 1 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg card-hover cursor-pointer" onclick="openModal('problem1Modal')">
+                    <i data-feather="bar-chart-2" class="w-6 h-6 text-blue-600"></i>
+                    <p class="text-gray-700">Tu empresa no genera utilidades suficientes</p>
+                </div>
+                <!-- Problema 2 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg card-hover cursor-pointer" onclick="openModal('problem2Modal')">
+                    <i data-feather="alert-triangle" class="w-6 h-6 text-blue-600"></i>
+                    <p class="text-gray-700">No tienes claridad de tus flujos</p>
+                </div>
+                <!-- Problema 3 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg card-hover cursor-pointer" onclick="openModal('problem3Modal')">
+                    <i data-feather="users" class="w-6 h-6 text-blue-600"></i>
+                    <p class="text-gray-700">No te alcanza para pagar la nómina</p>
+                </div>
+                <!-- Problema 4 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg card-hover cursor-pointer" onclick="openModal('problem4Modal')">
+                    <i data-feather="settings" class="w-6 h-6 text-blue-600"></i>
+                    <p class="text-gray-700">Necesitas automatizar tus procesos</p>
+                </div>
+                <!-- Problema 5 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg card-hover cursor-pointer" onclick="openModal('problem5Modal')">
+                    <i data-feather="target" class="w-6 h-6 text-blue-600"></i>
+                    <p class="text-gray-700">Quieres reducir la nómina sin perder calidad</p>
+                </div>
+                <!-- Problema 6 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg card-hover cursor-pointer" onclick="openModal('problem6Modal')">
+                    <i data-feather="check-circle" class="w-6 h-6 text-blue-600"></i>
+                    <p class="text-gray-700">Faltan objetivos claros y procesos definidos</p>
+                </div>
+                <!-- Problema 7 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg card-hover cursor-pointer" onclick="openModal('problem7Modal')">
+                    <i data-feather="cpu" class="w-6 h-6 text-blue-600"></i>
+                    <p class="text-gray-700">No sabes cómo integrar inteligencia artificial</p>
+                </div>
+                <!-- Problema 8 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg card-hover cursor-pointer" onclick="openModal('problem8Modal')">
+                    <i data-feather="trending-up" class="w-6 h-6 text-blue-600"></i>
+                    <p class="text-gray-700">Estás atravesando una crisis y necesitas soluciones urgentes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">¿Qué ofrecemos?</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto text-center">
+                En nuestra empresa, combinamos <span class="font-semibold">coaching empresarial estratégico</span> con <span class="font-semibold">herramientas de automatización</span>, ofreciendo soluciones a medida para los desafíos que enfrentan las empresas hoy en día.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Servicio 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg cursor-pointer card-hover" onclick="openModal('service1Modal')">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-900">Coaching Empresarial y Resolución de Crisis</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500"></i>
+                            <span>Identificación de problemas críticos</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500"></i>
+                            <span>Diagnóstico y estrategia personalizada para estructura y crecimiento</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500"></i>
+                            <span>Apoyo en la toma de decisiones clave</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg cursor-pointer card-hover" onclick="openModal('service2Modal')">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-900">Automatización y Optimización de Procesos</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <i data-feather="settings" class="w-5 h-5 text-blue-500"></i>
+                            <span>Integración de tecnologías como inteligencia artificial</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-feather="settings" class="w-5 h-5 text-blue-500"></i>
+                            <span>Reducción de tareas manuales para minimizar errores</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-feather="settings" class="w-5 h-5 text-blue-500"></i>
+                            <span>Implementación de sistemas eficientes que ahorran tiempo y recursos</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">¿Quiénes somos?</h2>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openModal('rafaModal')">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Rafael Alboukrek</h3>
+                    <p class="text-lg font-semibold text-gray-700 mb-2">Co-fundador</p>
+                    <p class="text-gray-600">Experto en manejo de crisis, diagnóstico empresarial, estructura empresarial y mejora organizacional con 17 años de experiencia.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl" onclick="openModal('joseModal')">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">José Asse</h3>
+                    <p class="text-lg font-semibold text-gray-700 mb-2">Co-fundador</p>
+                    <p class="text-gray-600">Experto en desarrollo empresarial, implementación de tecnologías avanzadas, automatización de procesos y aplicación de inteligencia artificial, con 15 años de experiencia en organizaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">¿Por qué elegirnos?</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg text-gray-600 mb-8">
+                    Somos más que consultores: nos convertimos en tus socios estratégicos. Nuestra misión es no solo resolver los problemas inmediatos, sino también preparar a tu empresa para el futuro, brindándote las herramientas necesarias para operar de manera más eficiente y evitar futuras crisis.
+                </p>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Por qué elegirnos 1 -->
+                    <div class="bg-blue-50 p-6 rounded-lg cursor-pointer card-hover" onclick="openModal('choose1Modal')">
+                        <h3 class="font-bold text-xl mb-2 text-blue-900">Resultados garantizados</h3>
+                        <p>Soluciones prácticas con impacto inmediato y duradero.</p>
+                    </div>
+                    
+                    <!-- Por qué elegirnos 2 -->
+                    <div class="bg-blue-50 p-6 rounded-lg cursor-pointer card-hover" onclick="openModal('choose2Modal')">
+                        <h3 class="font-bold text-xl mb-2 text-blue-900">Enfoque humano</h3>
+                        <p>Respetamos el equilibrio entre negocio y bienestar del equipo.</p>
+                    </div>
+                    
+                    <!-- Por qué elegirnos 3 -->
+                    <div class="bg-blue-50 p-6 rounded-lg cursor-pointer card-hover" onclick="openModal('choose3Modal')">
+                        <h3 class="font-bold text-xl mb-2 text-blue-900">Métricas</h3>
+                        <p>Indicadores prácticos para una toma de decisiones oportuna.</p>
+                    </div>
+                    
+                    <!-- Por qué elegirnos 4 -->
+                    <div class="bg-blue-50 p-6 rounded-lg cursor-pointer card-hover" onclick="openModal('choose4Modal')">
+                        <h3 class="font-bold text-xl mb-2 text-blue-900">Visibilidad</h3>
+                        <p>Claridad en el potencial y riesgos de tu empresa 24/7.</p>
+                    </div>
+                    
+                    <!-- Por qué elegirnos 5 -->
+                    <div class="bg-blue-50 p-6 rounded-lg cursor-pointer card-hover" onclick="openModal('choose5Modal')">
+                        <h3 class="font-bold text-xl mb-2 text-blue-900">Optimización</h3>
+                        <p>Aprovechamos recursos y evitamos fugas de dinero.</p>
+                    </div>
+                    
+                    <!-- Por qué elegirnos 6 -->
+                    <div class="bg-blue-50 p-6 rounded-lg cursor-pointer card-hover" onclick="openModal('choose6Modal')">
+                        <h3 class="font-bold text-xl mb-2 text-blue-900">Simplificación</h3>
+                        <p>Ahorro de tiempo y reducción de errores en tareas repetitivas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">¡Déjanos ayudarte a transformar tu negocio!</h2>
+            <a href="https://wa.me/+525551092674?text=Me%20interesa%20escuchar%20más%20sobre%20RJ%20Coaching" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-blue-100 transition-colors">
+                Contáctanos por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Mentura. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modales -->
+    <!-- Modales -->
+    <!-- Modal para Rafael (aún no implementado, pero puedes seguir el mismo patrón) -->
+    <div id="rafaModal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl max-h-[90vh] p-6 rounded-lg shadow-lg relative overflow-y-auto">
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('rafaModal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+            <!-- Contenido del Modal de Rafael -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Rafael Alboukrek</h2>
+                <p class="text-lg font-semibold text-gray-800">Co-fundador</p>
+                <p class="text-gray-600">
+                    <!-- Aquí puedes agregar el contenido detallado de Rafael -->
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam...
+                </p>
+                <!-- Más contenido -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para José -->
+    <div id="joseModal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('joseModal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <!-- Resumen -->
+                <div>
+                    <h2 class="text-2xl font-bold text-blue-900 mb-2">José Asse</h2>
+                    <p class="text-lg font-semibold text-gray-800 mb-4">Co-fundador y Coach Estratégico</p>
+                    <p class="text-gray-600 leading-relaxed">
+                        <strong>Resumen:</strong> Con más de 15 años de experiencia en estrategia empresarial y tecnología, José se destaca por su capacidad para integrar herramientas avanzadas de inteligencia artificial y automatización en empresas de diversas industrias. Su habilidad para liderar equipos, resolver problemas complejos y optimizar procesos lo convierte en un aliado invaluable para negocios que buscan adaptarse rápidamente a las demandas del mercado actual. Su enfoque en la innovación tecnológica y su visión estratégica le permiten identificar oportunidades de crecimiento y mejora continua.
+                    </p>
+                </div>
+
+                <!-- Valores y Fortalezas -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Valores y Fortalezas</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Innovación y Adaptabilidad:</strong> Experto en implementar tecnologías de IA y automatización en procesos empresariales.</li>
+                        <li><strong>Liderazgo Estratégico:</strong> Amplia experiencia en la dirección de empresas en sectores diversos, con un enfoque en la optimización y crecimiento sostenible.</li>
+                        <li><strong>Resolución de Problemas:</strong> Capacidad para manejar y resolver desafíos complejos, adaptándose a las necesidades del cliente.</li>
+                        <li><strong>Compromiso con la Eficiencia:</strong> Busca siempre reducir errores y maximizar el rendimiento organizacional.</li>
+                    </ul>
+                </div>
+
+                <!-- Experiencia en Tecnología e Inteligencia Artificial -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Experiencia en Tecnología e Inteligencia Artificial</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-100 p-4 rounded">
+                            <p class="font-semibold">Prompt Crafting</p>
+                            <p class="text-sm text-gray-600">Habilidad avanzada en creación de prompts para generación de texto, código e imágenes.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded">
+                            <p class="font-semibold">Modelos Generativos</p>
+                            <p class="text-sm text-gray-600">Dominio de ChatGPT, Claude y modelos similares.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded">
+                            <p class="font-semibold">Custom GPT’s y Artifacts</p>
+                            <p class="text-sm text-gray-600">Creación de soluciones personalizadas mediante GPT's específicos y artifacts.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded">
+                            <p class="font-semibold">Automatización</p>
+                            <p class="text-sm text-gray-600">Experto en herramientas como Monday, Notion, Zapier y Make.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formación Académica -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Formación Académica</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>2004-2005:</strong> Licenciatura en Derecho, Universidad Iberoamericana</li>
+                        <li><strong>2006-2009:</strong> Licenciatura en Administración de Empresas, Universidad Iberoamericana y Universidad de Belgrano, Argentina</li>
+                        <li><strong>2011:</strong> Diplomado en Entrenamiento Estratégico para Dueños de Negocio, CESE</li>
+                    </ul>
+                </div>
+
+                <!-- Experiencia Laboral -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Experiencia Laboral</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="p-4 bg-gray-50 rounded">
+                            <p><strong>Wepark</strong> - Director de Estrategia (2011 - Presente)</p>
+                            <p class="text-sm text-gray-600">Encargado de diseñar y ejecutar estrategias de crecimiento y optimización.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded">
+                            <p><strong>Sigma Seguridad</strong> - Fundador y Director de Estrategia (2013 - Presente)</p>
+                            <p class="text-sm text-gray-600">Liderazgo estratégico en servicios de seguridad para empresas.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded">
+                            <p><strong>Acfin</strong> - Fundador y Director de Estrategia (2013 - Presente)</p>
+                            <p class="text-sm text-gray-600">Implementación de procesos financieros eficientes y personalizados.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded">
+                            <p><strong>Aditum</strong> - Fundador y CEO (2018 - Presente)</p>
+                            <p class="text-sm text-gray-600">Consultoría avanzada en automatización y optimización de negocios.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded">
+                            <p><strong>TimeKast</strong> - Fundador y CEO (2024 - Presente)</p>
+                            <p class="text-sm text-gray-600">Desarrollo de soluciones tecnológicas innovadoras para mejorar la eficiencia organizacional.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Idiomas -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Idiomas</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Español:</strong> Nivel avanzado en escritura y habla.</li>
+                        <li><strong>Inglés:</strong> Nivel avanzado en escritura y habla.</li>
+                        <li><strong>Hebreo:</strong> Nivel medio en comprensión; básico en escritura y habla.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Problema 1 -->
+    <div id="problem1Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('problem1Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Tu empresa no genera utilidades suficientes</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Identificación y Solución de Problemas Financieros</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> Muchas empresas enfrentan dificultades para generar utilidades adecuadas, lo que puede poner en riesgo su sostenibilidad a largo plazo. Este problema puede deberse a una variedad de factores, incluyendo costos operativos elevados, ineficiencias en los procesos, falta de diversificación de ingresos, o estrategias de precios inadecuadas.
+                </p>
+
+                <!-- Estrategias para Solucionar el Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Estrategias para Solucionar este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Análisis de Costos:</strong> Evaluar y reducir costos operativos sin comprometer la calidad del servicio o producto.</li>
+                        <li><strong>Optimización de Procesos:</strong> Implementar herramientas de automatización para mejorar la eficiencia.</li>
+                        <li><strong>Diversificación de Ingresos:</strong> Explorar nuevas fuentes de ingresos o expandir líneas de productos.</li>
+                        <li><strong>Revisión de Estrategias de Precios:</strong> Ajustar precios para reflejar mejor el valor ofrecido y el mercado objetivo.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios de Resolver Este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios de Resolver Este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Aumento de la rentabilidad y sostenibilidad a largo plazo.</li>
+                        <li>Mejora en la competitividad del mercado.</li>
+                        <li>Mayor capacidad de reinversión y crecimiento.</li>
+                        <li>Reducción del estrés financiero y mejora del ambiente laboral.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Problema 2 -->
+    <div id="problem2Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('problem2Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">No tienes claridad de tus flujos</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Visualización y Optimización de Flujos de Trabajo</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> La falta de claridad en los flujos de trabajo puede llevar a ineficiencias, errores y retrasos en las operaciones diarias. Sin una comprensión clara de cómo fluye el trabajo dentro de la empresa, es difícil identificar áreas de mejora o implementar cambios efectivos.
+                </p>
+
+                <!-- Estrategias para Solucionar el Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Estrategias para Solucionar este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Mapeo de Procesos:</strong> Documentar y visualizar todos los procesos operativos para identificar ineficiencias.</li>
+                        <li><strong>Implementación de Herramientas de Gestión:</strong> Utilizar software de gestión de proyectos y flujos de trabajo como Notion, Monday o Asana.</li>
+                        <li><strong>Capacitación del Personal:</strong> Formar al equipo en las mejores prácticas para gestionar y optimizar los flujos de trabajo.</li>
+                        <li><strong>Revisión y Mejora Continua:</strong> Establecer ciclos de revisión periódicos para mejorar constantemente los procesos.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios de Resolver Este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios de Resolver Este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Mayor eficiencia operativa y reducción de tiempos muertos.</li>
+                        <li>Mejora en la calidad del producto o servicio ofrecido.</li>
+                        <li>Aumento de la satisfacción del cliente.</li>
+                        <li>Facilidad para escalar y crecer sin perder control sobre las operaciones.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Problema 3 -->
+    <div id="problem3Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('problem3Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">No te alcanza para pagar la nómina</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Gestión Financiera y Optimización de Recursos Humanos</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> La incapacidad para cubrir la nómina puede ser una señal de problemas financieros más profundos. Este problema no solo afecta la moral del equipo, sino que también puede llevar a la pérdida de talento clave y a una disminución en la productividad.
+                </p>
+
+                <!-- Estrategias para Solucionar el Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Estrategias para Solucionar este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Análisis de Costos Laborales:</strong> Evaluar y optimizar los costos asociados al personal.</li>
+                        <li><strong>Reestructuración de la Nómina:</strong> Implementar esquemas de pago flexibles o incentivos basados en el rendimiento.</li>
+                        <li><strong>Automatización de Tareas:</strong> Reducir la carga de trabajo manual mediante la automatización de procesos.</li>
+                        <li><strong>Capacitación y Desarrollo:</strong> Mejorar la eficiencia del equipo a través de programas de formación.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios de Resolver Este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios de Resolver Este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Estabilidad financiera y operativa de la empresa.</li>
+                        <li>Mayor retención y satisfacción del personal.</li>
+                        <li>Aumento de la productividad y eficiencia.</li>
+                        <li>Capacidad para reinvertir en áreas clave del negocio.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Problema 4 -->
+    <div id="problem4Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('problem4Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Necesitas automatizar tus procesos</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Implementación de Tecnologías de Automatización</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> La automatización de procesos es esencial para mejorar la eficiencia, reducir errores y liberar tiempo para tareas estratégicas. Sin automatización, las empresas pueden enfrentarse a cuellos de botella y a una mayor carga de trabajo manual que limita su crecimiento.
+                </p>
+
+                <!-- Estrategias para Solucionar este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Estrategias para Solucionar este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Identificación de Procesos Clave:</strong> Detectar los procesos que se beneficiarán más de la automatización.</li>
+                        <li><strong>Selección de Herramientas Adecuadas:</strong> Implementar software de automatización como Zapier, Make, Notion o Monday.</li>
+                        <li><strong>Integración de Sistemas:</strong> Asegurar que las herramientas de automatización se integren de manera eficiente con los sistemas existentes.</li>
+                        <li><strong>Capacitación del Personal:</strong> Formar al equipo para utilizar las nuevas herramientas y adaptarse a los cambios en los procesos.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios de Resolver Este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios de Resolver Este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Reducción de errores humanos y mejora en la precisión.</li>
+                        <li>Aumento de la eficiencia y productividad del equipo.</li>
+                        <li>Mayor capacidad para escalar operaciones sin incrementar costos significativamente.</li>
+                        <li>Libertad para enfocarse en tareas estratégicas y de alto valor.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Problema 5 -->
+    <div id="problem5Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('problem5Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Quieres reducir la nómina sin perder calidad</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Optimización de Recursos Humanos y Presupuestos</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> Reducir la nómina sin comprometer la calidad del trabajo es un desafío que muchas empresas enfrentan. Este objetivo requiere una estrategia bien planificada para optimizar los recursos humanos y financieros sin afectar la productividad ni la moral del equipo.
+                </p>
+
+                <!-- Estrategias para Solucionar este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Estrategias para Solucionar este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Evaluación de Roles y Responsabilidades:</strong> Analizar si hay redundancias o roles que puedan ser combinados.</li>
+                        <li><strong>Automatización de Tareas Repetitivas:</strong> Implementar tecnologías que reduzcan la necesidad de mano de obra para tareas rutinarias.</li>
+                        <li><strong>Outsourcing:</strong> Externalizar ciertas funciones a proveedores externos para reducir costos.</li>
+                        <li><strong>Programas de Incentivos y Bonificaciones:</strong> En lugar de aumentos salariales fijos, ofrecer incentivos basados en el rendimiento.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios de Resolver Este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios de Resolver Este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Reducción de costos operativos sin sacrificar la calidad.</li>
+                        <li>Mejora en la eficiencia y productividad del equipo.</li>
+                        <li>Aumento de la moral y satisfacción del personal al evitar despidos masivos.</li>
+                        <li>Mayor flexibilidad para adaptarse a cambios del mercado.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Problema 6 -->
+    <div id="problem6Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('problem6Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Faltan objetivos claros y procesos definidos</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Establecimiento de Metas y Estructuración de Procesos</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> La falta de objetivos claros y procesos bien definidos puede llevar a la desorganización, falta de dirección y baja motivación en el equipo. Es esencial establecer metas claras y estructurar los procesos para asegurar que todos los miembros del equipo estén alineados y trabajen hacia un mismo propósito.
+                </p>
+
+                <!-- Estrategias para Solucionar este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Estrategias para Solucionar este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Definición de Metas SMART:</strong> Establecer objetivos que sean Específicos, Medibles, Alcanzables, Relevantes y con Tiempo definido.</li>
+                        <li><strong>Documentación de Procesos:</strong> Crear manuales y guías que describan cada proceso operativo.</li>
+                        <li><strong>Comunicación Efectiva:</strong> Asegurar que todos los miembros del equipo entiendan las metas y los procesos establecidos.</li>
+                        <li><strong>Implementación de Sistemas de Seguimiento:</strong> Utilizar herramientas para monitorear el progreso hacia los objetivos y la eficiencia de los procesos.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios de Resolver Este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios de Resolver Este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Mejora en la organización y eficiencia operativa.</li>
+                        <li>Aumento de la motivación y compromiso del equipo.</li>
+                        <li>Facilidad para medir el progreso y ajustar estrategias según sea necesario.</li>
+                        <li>Mayor claridad en la dirección y propósito de la empresa.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Problema 7 -->
+    <div id="problem7Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('problem7Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">No sabes cómo integrar inteligencia artificial</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Integración de Inteligencia Artificial en Procesos Empresariales</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> La inteligencia artificial (IA) ofrece enormes oportunidades para mejorar la eficiencia, la toma de decisiones y la innovación en las empresas. Sin embargo, su integración puede ser desafiante sin el conocimiento y las herramientas adecuadas.
+                </p>
+
+                <!-- Estrategias para Solucionar este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Estrategias para Solucionar este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Evaluación de Necesidades:</strong> Identificar áreas específicas donde la IA puede aportar valor.</li>
+                        <li><strong>Selección de Herramientas de IA:</strong> Implementar soluciones de IA adecuadas a las necesidades de la empresa, como ChatGPT para atención al cliente o herramientas de análisis de datos.</li>
+                        <li><strong>Capacitación del Personal:</strong> Formar al equipo en el uso y mantenimiento de las herramientas de IA.</li>
+                        <li><strong>Integración con Sistemas Existentes:</strong> Asegurar que las soluciones de IA se integren de manera fluida con los sistemas y procesos actuales.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios de Resolver Este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios de Resolver Este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Automatización de tareas repetitivas, liberando tiempo para actividades estratégicas.</li>
+                        <li>Mejora en la toma de decisiones basada en análisis de datos avanzados.</li>
+                        <li>Mayor eficiencia operativa y reducción de costos.</li>
+                        <li>Innovación en productos y servicios, aumentando la competitividad.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Problema 8 -->
+    <div id="problem8Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('problem8Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Estás atravesando una crisis y necesitas soluciones urgentes</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Gestión de Crisis y Desarrollo de Soluciones Rápidas</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> Las crisis pueden surgir de diversas fuentes, como problemas financieros, desastres naturales, pandemias o conflictos internos. Manejar una crisis de manera efectiva es crucial para minimizar el impacto negativo y asegurar la supervivencia de la empresa.
+                </p>
+
+                <!-- Estrategias para Solucionar este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Estrategias para Solucionar este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Planificación de Contingencia:</strong> Desarrollar planes de acción para diferentes escenarios de crisis.</li>
+                        <li><strong>Comunicación Efectiva:</strong> Establecer canales claros de comunicación interna y externa durante la crisis.</li>
+                        <li><strong>Análisis Rápido de Situación:</strong> Evaluar rápidamente la situación para tomar decisiones informadas.</li>
+                        <li><strong>Apoyo Psicológico:</strong> Proveer soporte emocional y psicológico al equipo para mantener la moral alta.</li>
+                        <li><strong>Implementación de Soluciones Rápidas:</strong> Actuar de manera decisiva para mitigar los efectos de la crisis.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios de Resolver Este Problema -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios de Resolver Este Problema</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Minimización del impacto negativo en la operación y finanzas.</li>
+                        <li>Recuperación más rápida y eficiente de la normalidad operativa.</li>
+                        <li>Mejora en la resiliencia y capacidad de respuesta ante futuras crisis.</li>
+                        <li>Mayor confianza y lealtad por parte de clientes y empleados.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Servicio 1 -->
+    <div id="service1Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('service1Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Coaching Empresarial y Resolución de Crisis</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Transformando Desafíos en Oportunidades</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> Nuestro servicio de Coaching Empresarial y Resolución de Crisis está diseñado para ayudar a las empresas a identificar y superar desafíos críticos. A través de un enfoque estratégico y personalizado, trabajamos junto a tu equipo para desarrollar soluciones efectivas que impulsen el crecimiento y la resiliencia.
+                </p>
+
+                <!-- Componentes del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Componentes del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Diagnóstico Empresarial:</strong> Evaluación integral de la situación actual de la empresa.</li>
+                        <li><strong>Desarrollo de Estrategias:</strong> Creación de planes de acción personalizados para abordar los desafíos identificados.</li>
+                        <li><strong>Implementación de Soluciones:</strong> Apoyo en la ejecución de las estrategias desarrolladas.</li>
+                        <li><strong>Seguimiento y Ajustes:</strong> Monitoreo continuo del progreso y ajustes según sea necesario.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Mejora en la eficiencia operativa y financiera.</li>
+                        <li>Desarrollo de una cultura empresarial resiliente.</li>
+                        <li>Aumento de la motivación y compromiso del equipo.</li>
+                        <li>Capacidad para adaptarse rápidamente a cambios del mercado.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Servicio 2 -->
+    <div id="service2Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('service2Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Automatización y Optimización de Procesos</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Impulsando la Eficiencia mediante Tecnología</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> Nuestro servicio de Automatización y Optimización de Procesos está diseñado para transformar tus operaciones empresariales mediante la implementación de tecnologías avanzadas. Al automatizar tareas repetitivas y optimizar flujos de trabajo, ayudamos a tu empresa a reducir costos, minimizar errores y aumentar la productividad.
+                </p>
+
+                <!-- Componentes del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Componentes del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Análisis de Procesos:</strong> Identificación de áreas clave para la automatización.</li>
+                        <li><strong>Selección de Herramientas:</strong> Implementación de software y tecnologías adecuadas.</li>
+                        <li><strong>Integración de Sistemas:</strong> Asegurar que las nuevas herramientas se integren con los sistemas existentes.</li>
+                        <li><strong>Capacitación del Personal:</strong> Formación del equipo para utilizar las nuevas tecnologías de manera efectiva.</li>
+                        <li><strong>Mantenimiento y Soporte:</strong> Asegurar el funcionamiento continuo y eficiente de las herramientas implementadas.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Reducción significativa de costos operativos.</li>
+                        <li>Aumento de la productividad y eficiencia del equipo.</li>
+                        <li>Minimización de errores humanos.</li>
+                        <li>Mejora en la toma de decisiones basada en datos precisos.</li>
+                        <li>Mayor capacidad para escalar y adaptarse a las demandas del mercado.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Por qué elegirnos 1 -->
+    <div id="choose1Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('choose1Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Resultados garantizados</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Compromiso con la Excelencia y la Eficacia</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> En Mentura, nos comprometemos a entregar resultados tangibles y medibles que impulsen el crecimiento y la eficiencia de tu empresa. Nuestra metodología probada y nuestro enfoque personalizado aseguran que cada solución implementada tenga un impacto positivo y duradero.
+                </p>
+
+                <!-- Componentes del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Componentes del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Metodología Probada:</strong> Utilizamos estrategias y técnicas que han demostrado ser efectivas en múltiples industrias.</li>
+                        <li><strong>Enfoque Personalizado:</strong> Adaptamos nuestras soluciones a las necesidades específicas de tu empresa.</li>
+                        <li><strong>Monitoreo de Resultados:</strong> Seguimiento continuo para asegurar el cumplimiento de los objetivos establecidos.</li>
+                        <li><strong>Retroalimentación Continua:</strong> Ajustamos nuestras estrategias basándonos en los resultados obtenidos y la retroalimentación de tu equipo.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Incremento en la rentabilidad y eficiencia operativa.</li>
+                        <li>Mejora en la calidad de los productos o servicios ofrecidos.</li>
+                        <li>Mayor satisfacción y retención de clientes.</li>
+                        <li>Fortalecimiento de la posición competitiva en el mercado.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Por qué elegirnos 2 -->
+    <div id="choose2Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('choose2Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Enfoque humano</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Prioridad al Bienestar y Desarrollo del Equipo</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> Creemos que el éxito empresarial está directamente relacionado con el bienestar y desarrollo de su equipo. Nuestro enfoque humano garantiza que cada miembro de tu organización se sienta valorado, motivado y empoderado para contribuir al crecimiento de la empresa.
+                </p>
+
+                <!-- Componentes del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Componentes del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Desarrollo del Talento:</strong> Programas de capacitación y desarrollo profesional para el equipo.</li>
+                        <li><strong>Cultura Empresarial:</strong> Fomento de un ambiente de trabajo positivo y colaborativo.</li>
+                        <li><strong>Bienestar del Empleado:</strong> Iniciativas para mejorar la salud física y mental del equipo.</li>
+                        <li><strong>Comunicación Abierta:</strong> Establecimiento de canales efectivos de comunicación interna.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Mejora en la moral y satisfacción del personal.</li>
+                        <li>Aumento de la productividad y eficiencia.</li>
+                        <li>Reducción de la rotación de empleados.</li>
+                        <li>Fortalecimiento de la cohesión y colaboración del equipo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Por qué elegirnos 3 -->
+    <div id="choose3Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('choose3Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Métricas</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Indicadores para una Toma de Decisiones Informada</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> Las métricas son esenciales para evaluar el desempeño y el progreso hacia los objetivos empresariales. En Mentura, ayudamos a tu empresa a definir y monitorear las métricas clave que son cruciales para tu éxito.
+                </p>
+
+                <!-- Componentes del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Componentes del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Definición de KPIs:</strong> Identificación de los Indicadores Clave de Desempeño más relevantes para tu negocio.</li>
+                        <li><strong>Implementación de Sistemas de Seguimiento:</strong> Uso de herramientas para monitorear y reportar métricas en tiempo real.</li>
+                        <li><strong>Análisis de Datos:</strong> Interpretación de los datos recopilados para tomar decisiones informadas.</li>
+                        <li><strong>Ajustes Estratégicos:</strong> Adaptación de estrategias basadas en el análisis de métricas.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Mejora en la toma de decisiones basada en datos concretos.</li>
+                        <li>Capacidad para identificar áreas de mejora y oportunidades de crecimiento.</li>
+                        <li>Aumento de la eficiencia operativa.</li>
+                        <li>Mayor transparencia y responsabilidad dentro de la organización.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Por qué elegirnos 4 -->
+    <div id="choose4Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('choose4Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Visibilidad</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Claridad en el Potencial y Riesgos de tu Empresa</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> Tener una visión clara del estado actual y el potencial futuro de tu empresa es fundamental para tomar decisiones estratégicas. En Mentura, proporcionamos herramientas y análisis que aumentan la visibilidad de tus operaciones, permitiéndote identificar riesgos y oportunidades en tiempo real.
+                </p>
+
+                <!-- Componentes del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Componentes del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Dashboard de KPIs:</strong> Creación de paneles personalizados para monitorear métricas clave.</li>
+                        <li><strong>Análisis de Datos:</strong> Uso de herramientas de análisis para interpretar grandes volúmenes de datos.</li>
+                        <li><strong>Reportes Periódicos:</strong> Generación de informes detallados sobre el desempeño de la empresa.</li>
+                        <li><strong>Alertas y Notificaciones:</strong> Configuración de alertas para eventos críticos o desviaciones en las métricas.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Mejora en la toma de decisiones estratégicas.</li>
+                        <li>Identificación temprana de riesgos potenciales.</li>
+                        <li>Mayor transparencia y control sobre las operaciones.</li>
+                        <li>Optimización de recursos y mejor asignación de presupuestos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Por qué elegirnos 5 -->
+    <div id="choose5Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('choose5Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Optimización</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Maximización de Recursos y Minimización de Costos</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> La optimización de recursos es clave para mejorar la eficiencia y reducir costos operativos. En Mentura, te ayudamos a identificar y aprovechar al máximo los recursos disponibles, asegurando que cada inversión tenga el mayor retorno posible.
+                </p>
+
+                <!-- Componentes del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Componentes del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Análisis de Recursos:</strong> Evaluación detallada de los recursos actuales y su utilización.</li>
+                        <li><strong>Optimización de Procesos:</strong> Mejora de los flujos de trabajo para aumentar la eficiencia.</li>
+                        <li><strong>Reducción de Costos:</strong> Identificación y eliminación de gastos innecesarios.</li>
+                        <li><strong>Reasignación de Recursos:</strong> Distribución eficiente de recursos hacia áreas estratégicas.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Aumento de la eficiencia operativa y reducción de tiempos de ejecución.</li>
+                        <li>Mayor rentabilidad y sostenibilidad financiera.</li>
+                        <li>Mejora en la calidad y consistencia de los productos o servicios.</li>
+                        <li>Capacidad para reinvertir en áreas clave del negocio.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Por qué elegirnos 6 -->
+    <div id="choose6Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content">
+            <!-- Botón de Cierre -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onclick="closeModal('choose6Modal')">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Contenido del Modal -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-blue-900 mb-2">Simplificación</h2>
+                <p class="text-lg font-semibold text-gray-800 mb-4">Reducción de Complejidad y Mejora de la Usabilidad</p>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong>Descripción:</strong> La simplificación de procesos y estructuras empresariales facilita la operación diaria y mejora la experiencia tanto de los empleados como de los clientes. En Mentura, trabajamos para eliminar la complejidad innecesaria, permitiendo que tu empresa funcione de manera más fluida y efectiva.
+                </p>
+
+                <!-- Componentes del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Componentes del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Mapeo de Procesos:</strong> Identificación de pasos redundantes o innecesarios.</li>
+                        <li><strong>Implementación de Herramientas de Simplificación:</strong> Uso de software y tecnologías que faciliten la operativa.</li>
+                        <li><strong>Reducción de Niveles Jerárquicos:</strong> Simplificación de la estructura organizacional para una mejor comunicación.</li>
+                        <li><strong>Capacitación en Mejores Prácticas:</strong> Formación del equipo en métodos eficientes y simplificados de trabajo.</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios del Servicio -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Beneficios del Servicio</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Mejora en la eficiencia operativa y reducción de tiempos de ejecución.</li>
+                        <li>Mayor satisfacción del cliente debido a procesos más ágiles y efectivos.</li>
+                        <li>Aumento de la productividad del equipo.</li>
+                        <li>Facilidad para escalar operaciones sin aumentar la complejidad.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
