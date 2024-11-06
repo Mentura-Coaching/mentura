@@ -1,0 +1,18 @@
+/* styles.css */
+
+/* Tailwind CSS CDN ya está incluido en el HTML, no es necesario agregarlo aquí */
+
+/* Estilos personalizados */
+.gradient-bg {
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.card-hover:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.modal-content {
+    max-height: 80vh; /* Limita la altura máxima del modal al 80% del viewport */
+    overflow-y: auto; /* Añade un scrollbar si el contenido es demasiado alto */
+}
