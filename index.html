@@ -204,12 +204,26 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Mentura. Todos los derechos reservados.</p>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <p class="mb-4 md:mb-0">&copy; 2024 Mentura. Todos los derechos reservados.</p>
+            <!-- TrustLogo Container -->
+            <div class="flex items-center">
+                <!-- TrustLogo Script -->
+                <script type="text/javascript"> //<![CDATA[
+                  var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
+                  document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+                //]]></script>
+                <script language="JavaScript" type="text/javascript">
+                  TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_md_167x42.png", "POSDV", "none");
+                </script>
+                <div class="ml-4">
+                    <!-- El logo se insertará aquí por el script de TrustLogo -->
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Modales -->
+
     <!-- Modales -->
     <!-- Modal para Rafael (aún no implementado, pero puedes seguir el mismo patrón) -->
     <div id="rafaModal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
