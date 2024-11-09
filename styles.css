@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Navbar */
 nav {
     position: fixed;
@@ -11,7 +9,12 @@ nav {
     z-index: 10; /* Asegura que esté por encima del contenido */
 }
 
-
+/* Menú móvil desplegable */
+#mobile-menu {
+    background-color: white; /* Color de fondo sólido para el menú móvil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional para destacar el menú móvil */
+    transition: max-height 0.3s ease-in-out;
+}
 
 /* Efecto subrayado animado para enlaces del navbar */
 .navbar-link {
@@ -37,7 +40,6 @@ nav {
     left: 0;
     background: #306583; /* Color del subrayado al hacer hover */
 }
-
 
 /* Ajustes para scroll-margin-top en secciones */
 section {
@@ -76,11 +78,7 @@ section {
     text-align: justify;
 }
 
-/* Opcional: Ajustar la transición del menú móvil */
-#mobile-menu {
-    transition: max-height 0.3s ease-in-out;
-}
-
+/* Ajustes del banner */
 .bg-hero-banner {
     background-image: url('images/banner.jpg');
     background-size: contain;
@@ -96,7 +94,7 @@ section {
     margin-top: 80px; /* Ajusta este valor según la altura de tu navbar */
 }
 
-
+/* Media queries */
 @media (min-width: 1024px) {
     .bg-hero-banner {
         height: 30vh; /* Ajusta la altura para pantallas grandes */
@@ -108,5 +106,3 @@ section {
         height: 50vh; /* Incrementa la altura en pantallas pequeñas */
     }
 }
-
-
