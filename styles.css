@@ -1,9 +1,50 @@
-
 /* styles.css */
 
-/* Tailwind CSS CDN ya está incluido en el HTML, no es necesario agregarlo aquí */
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px; /* Ajusta la altura del navbar según tu diseño */
+    background-color: white; /* Color de fondo del navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional para destacar el navbar */
+    z-index: 10; /* Asegura que esté por encima del contenido */
+}
 
-/* Estilos personalizados */
+
+
+/* Efecto subrayado animado para enlaces del navbar */
+.navbar-link {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 0;
+    right: 0;
+    background: #304152; /* Color del subrayado inicial */
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+    left: 0;
+    background: #306583; /* Color del subrayado al hacer hover */
+}
+
+
+/* Ajustes para scroll-margin-top en secciones */
+section {
+    scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+/* Estilos personalizados adicionales */
 .gradient-bg {
     background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
 }
@@ -19,7 +60,7 @@
 }
 
 .bg-custom-blue {
-    background-color: #304152;
+    background: linear-gradient(to bottom right, #a1b7bd, #acc2c5);
 }
 
 .text-custom-blue {
@@ -28,6 +69,44 @@
 
 .text-custom-elegant {
     color: #306583; 
+}
+
+/* Clase personalizada para justificar texto */
+.text-justify {
+    text-align: justify;
+}
+
+/* Opcional: Ajustar la transición del menú móvil */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+}
+
+.bg-hero-banner {
+    background-image: url('images/banner.jpg');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+
+@media (min-width: 1024px) {
+    .bg-hero-banner {
+        height: 30vh; /* Ajusta la altura para pantallas grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .bg-hero-banner {
+        height: 50vh; /* Incrementa la altura en pantallas pequeñas */
+    }
 }
 
 
