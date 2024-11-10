@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Navbar */
 nav {
     position: fixed;
@@ -81,8 +83,8 @@ section {
 /* Ajustes del banner */
 .bg-hero-banner {
     background-image: url('images/banner.jpg');
-    background-size: contain;
-    background-position: top center;
+    background-size: cover; /* Cambiado de 'contain' a 'cover' */
+    background-position: center; /* Ajuste según preferencia */
     background-repeat: no-repeat;
     width: 100%;
     height: 40vh;
@@ -103,6 +105,7 @@ section {
 
 @media (max-width: 768px) {
     .bg-hero-banner {
-        height: 50vh; /* Incrementa la altura en pantallas pequeñas */
+        height: 40vh; /* Ajusta la altura para pantallas pequeñas */
     }
 }
+
