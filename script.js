@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn('Feather Icons no están definidos');
     }
 
-    // Obtener todos los modales
-    const modals = document.querySelectorAll('.fixed.inset-0.bg-black.bg-opacity-50');
+    // Obtener todos los modales usando la clase correcta
+    const modals = document.querySelectorAll('.modal-background');
 
     modals.forEach(modal => {
         // Cerrar modal al hacer clic en el overlay (fondo oscuro)
