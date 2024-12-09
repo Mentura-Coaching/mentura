@@ -109,3 +109,7 @@ section {
     }
 }
 
+/* Habilitar desplazamiento suave en toda la página */
+html {
+    scroll-behavior: smooth;
+}
