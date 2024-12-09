@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <!-- Problema 2 -->
-                <div class="p-6 bg-gray-50 rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl flex" onclick="openModal('problem8Modal')">
+                <div class="p-6 bg-gray-50 rounded-lg cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl flex" onclick="openModal('problem2Modal')">
                     <!-- Placeholder de imagen con dimensiones específicas -->
                     <img src="images/Problema2.jpg" alt="Problema 2" class="w-24 h-24 object-cover rounded mr-4 flex-shrink-0">
                     <div class="flex flex-col flex-grow">
@@ -359,23 +359,28 @@
 
     <!-- Modales -->
     <!-- Modal para Rafael -->
-    <div id="rafaModal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('rafaModal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-            
-            <!-- Contenido del Modal de Rafael -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Rafael Alboukrek</h2>
-                <p class="text-lg font-semibold text-gray-800">Socio y Director General</p>
+    <div id="rafaModal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Rafael Alboukrek</h2>
+                <button onclick="closeModal('rafaModal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <!-- Contenido del Modal -->
+            <div class="modal-body">
+                <p class="text-lg font-semibold text-gray-800">Co-fundador</p>
                 <p class="text-gray-600">
-                    Con 17 años de experiencia en dirección empresarial, manejo de crisis y estructura organizacional, Rafael se destaca por su capacidad de diagnosticar, comprender y generar planes de acción efectivos para detectar y resolver problemas cotidianos. Su liderazgo efectivo y su enfoque estratégico han llevado al éxito a equipos de hasta 200 personas, optimizando procesos productivos y estableciendo estructuras administrativas claras y eficientes.
+                    Con 17 años de experiencia en dirección empresarial, manejo de crisis y estructura organizacional,
+                    Rafael se destaca por su capacidad de diagnosticar, comprender y generar planes de acción efectivos 
+                    para detectar y resolver problemas cotidianos. Su liderazgo efectivo y su enfoque estratégico han 
+                    llevado al éxito a equipos de hasta 200 personas, optimizando procesos productivos y estableciendo 
+                    estructuras administrativas claras y eficientes.
                 </p>
                 
                 <!-- Valores y Fortalezas -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Valores y Fortalezas</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Liderazgo de Personal:</strong> Experto en liderar equipos de 30 a 200 personas, logrando objetivos y fomentando un ambiente de trabajo positivo.</li>
@@ -385,17 +390,17 @@
                         <li><strong>Estructura Administrativa:</strong> Organización y definición de procesos y actividades para mantener un orden y claridad operacional.</li>
                     </ul>
                 </div>
-    
+
                 <!-- Formación Académica -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Formación Académica</h3>
                     <ul class="space-y-2 text-gray-700">
                         <li><strong>2003 - 2008:</strong> Licenciatura en Administración Financiera, Tecnológico de Monterrey</li>
                     </ul>
                 </div>
-    
+
                 <!-- Experiencia Laboral -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Experiencia Laboral</h3>
                     <div class="space-y-4 text-gray-700">
                         <div class="p-4 bg-gray-50 rounded">
@@ -409,9 +414,9 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Idiomas -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Idiomas</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Español:</strong> Nivel avanzado en escritura y habla.</li>
@@ -422,28 +427,29 @@
         </div>
     </div>
 
-
     <!-- Modal para José -->
-    <div id="joseModal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative modal-content max-h-screen overflow-y-auto">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('joseModal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="joseModal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">José Asse</h2>
+                <button onclick="closeModal('joseModal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <!-- Resumen -->
-                <div>
-                    <h2 class="text-2xl font-bold text-custom-elegant mb-2">José Asse</h2>
-                    <p class="text-lg font-semibold text-gray-800 mb-4">Co-fundador</p>
-                    <p class="text-gray-600 leading-relaxed">
-                        Con más de 15 años de experiencia en estrategia empresarial y tecnología, José se destaca por su capacidad para integrar herramientas avanzadas de inteligencia artificial y automatización en empresas de diversas industrias. Su habilidad para liderar equipos, resolver problemas complejos y optimizar procesos lo convierte en un aliado invaluable para negocios que buscan adaptarse rápidamente a las demandas del mercado actual. Su enfoque en la innovación tecnológica y su visión estratégica le permiten identificar oportunidades de crecimiento y mejora continua.
-                    </p>
-                </div>
-
+            <div class="modal-body">
+                <p class="text-lg font-semibold text-gray-800">Co-fundador</p>
+                <p class="text-gray-600 leading-relaxed">
+                    Con más de 15 años de experiencia en estrategia empresarial y tecnología, José se destaca por su
+                    capacidad para integrar herramientas avanzadas de inteligencia artificial y automatización en empresas
+                    de diversas industrias. Su habilidad para liderar equipos, resolver problemas complejos y optimizar
+                    procesos lo convierte en un aliado invaluable para negocios que buscan adaptarse rápidamente a las 
+                    demandas del mercado actual.
+                </p>
+                
                 <!-- Valores y Fortalezas -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Valores y Fortalezas</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Innovación y Adaptabilidad:</strong> Experto en implementar tecnologías de IA y automatización en procesos empresariales.</li>
@@ -453,31 +459,8 @@
                     </ul>
                 </div>
 
-                <!-- Experiencia en Tecnología e Inteligencia Artificial -->
-                <div>
-                    <h3 class="text-xl font-bold text-custom-elegant mb-3">Experiencia en Tecnología e Inteligencia Artificial</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-gray-100 p-4 rounded">
-                            <p class="font-semibold">Prompt Crafting</p>
-                            <p class="text-sm text-gray-600">Habilidad avanzada en creación de prompts para generación de texto, código e imágenes.</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded">
-                            <p class="font-semibold">Modelos Generativos</p>
-                            <p class="text-sm text-gray-600">Dominio de ChatGPT, Claude y modelos similares.</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded">
-                            <p class="font-semibold">Custom GPT’s y Artifacts</p>
-                            <p class="text-sm text-gray-600">Creación de soluciones personalizadas mediante GPT's específicos y artifacts.</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded">
-                            <p class="font-semibold">Automatización</p>
-                            <p class="text-sm text-gray-600">Experto en herramientas como Monday, Notion, Zapier y Make.</p>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Formación Académica -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Formación Académica</h3>
                     <ul class="space-y-2 text-gray-700">
                         <li><strong>2004-2005:</strong> Licenciatura en Derecho, Universidad Iberoamericana</li>
@@ -487,34 +470,26 @@
                 </div>
 
                 <!-- Experiencia Laboral -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Experiencia Laboral</h3>
                     <div class="space-y-4 text-gray-700">
                         <div class="p-4 bg-gray-50 rounded">
                             <p><strong>Wepark</strong> - Director de Estrategia (2011 - Presente)</p>
-                            <p class="text-sm text-gray-600">Encargado de diseñar y ejecutar estrategias de crecimiento y optimización.</p>
                         </div>
                         <div class="p-4 bg-gray-50 rounded">
                             <p><strong>Sigma Seguridad</strong> - Fundador y Director de Estrategia (2013 - Presente)</p>
-                            <p class="text-sm text-gray-600">Liderazgo estratégico en servicios de seguridad para empresas.</p>
                         </div>
                         <div class="p-4 bg-gray-50 rounded">
                             <p><strong>Acfin</strong> - Fundador y Director de Estrategia (2013 - Presente)</p>
-                            <p class="text-sm text-gray-600">Implementación de procesos financieros eficientes y personalizados.</p>
                         </div>
                         <div class="p-4 bg-gray-50 rounded">
                             <p><strong>Aditum</strong> - Fundador y CEO (2018 - Presente)</p>
-                            <p class="text-sm text-gray-600">Consultoría avanzada en automatización y optimización de negocios.</p>
-                        </div>
-                        <div class="p-4 bg-gray-50 rounded">
-                            <p><strong>TimeKast</strong> - Fundador y CEO (2024 - Presente)</p>
-                            <p class="text-sm text-gray-600">Desarrollo de soluciones tecnológicas innovadoras para mejorar la eficiencia organizacional.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Idiomas -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Idiomas</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Español:</strong> Nivel avanzado en escritura y habla.</li>
@@ -526,24 +501,26 @@
         </div>
     </div>
 
-    <!-- Modal para Problema 1 -->
-    <div id="problem1Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('problem1Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
 
+    <!-- Modal para Problema 1 -->
+    <div id="problem1Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Tu empresa no genera utilidades suficientes</h2>
+                <button onclick="closeModal('problem1Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Tu empresa no genera utilidades suficientes</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Identificación y Solución de Problemas Financieros</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> Muchas empresas enfrentan dificultades para generar utilidades adecuadas, lo que puede poner en riesgo su sostenibilidad a largo plazo. Este problema puede deberse a una variedad de factores, incluyendo costos operativos elevados, ineficiencias en los procesos, falta de diversificación de ingresos, o estrategias de precios inadecuadas.
                 </p>
 
                 <!-- Estrategias para Solucionar el Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Estrategias para Solucionar este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Análisis de Costos:</strong> Evaluar y reducir costos operativos sin comprometer la calidad del servicio o producto.</li>
@@ -554,7 +531,7 @@
                 </div>
 
                 <!-- Beneficios de Resolver Este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios de Resolver Este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Aumento de la rentabilidad y sostenibilidad a largo plazo.</li>
@@ -567,41 +544,42 @@
         </div>
     </div>
 
-    <!-- Modal para Problema 8 -->
-    <div id="problem8Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('problem8Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <!-- Modal para Problema 2 -->
+    <div id="problem2Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Estás atravesando una crisis y necesitas soluciones urgentes</h2>
+                <button onclick="closeModal('problem2Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">No tienes claridad de tus flujos</h2>
-                <p class="text-lg font-semibold text-gray-800 mb-4">Visualización y Optimización de Flujos de Trabajo</p>
+            <div class="modal-body">
+                <p class="text-lg font-semibold text-gray-800 mb-4">Gestión de Crisis y Desarrollo de Soluciones Rápidas</p>
                 <p class="text-gray-600 leading-relaxed">
-                    <strong>Descripción:</strong> La falta de claridad en los flujos de trabajo puede llevar a ineficiencias, errores y retrasos en las operaciones diarias. Sin una comprensión clara de cómo fluye el trabajo dentro de la empresa, es difícil identificar áreas de mejora o implementar cambios efectivos.
+                    <strong>Descripción:</strong> Las crisis pueden surgir de diversas fuentes, como problemas financieros, desastres naturales, pandemias o conflictos internos. Manejar una crisis de manera efectiva es crucial para minimizar el impacto negativo y asegurar la supervivencia de la empresa.
                 </p>
 
                 <!-- Estrategias para Solucionar el Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Estrategias para Solucionar este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><strong>Mapeo de Procesos:</strong> Documentar y visualizar todos los procesos operativos para identificar ineficiencias.</li>
-                        <li><strong>Implementación de Herramientas de Gestión:</strong> Utilizar software de gestión de proyectos y flujos de trabajo.</li>
-                        <li><strong>Capacitación del Personal:</strong> Formar al equipo en las mejores prácticas para gestionar y optimizar los flujos de trabajo.</li>
-                        <li><strong>Revisión y Mejora Continua:</strong> Establecer ciclos de revisión periódicos para mejorar constantemente los procesos.</li>
+                        <li><strong>Planificación de Contingencia:</strong> Desarrollar planes de acción para diferentes escenarios de crisis.</li>
+                        <li><strong>Comunicación Efectiva:</strong> Establecer canales claros de comunicación interna y externa durante la crisis.</li>
+                        <li><strong>Análisis Rápido de Situación:</strong> Evaluar rápidamente la situación para tomar decisiones informadas.</li>
+                        <li><strong>Implementación de Soluciones Rápidas:</strong> Actuar de manera decisiva para mitigar los efectos de la crisis.</li>
                     </ul>
                 </div>
 
                 <!-- Beneficios de Resolver Este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios de Resolver Este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Mayor eficiencia operativa y reducción de tiempos muertos.</li>
-                        <li>Mejora en la calidad del producto o servicio ofrecido.</li>
-                        <li>Aumento de la satisfacción del cliente.</li>
-                        <li>Facilidad para escalar y crecer sin perder control sobre las operaciones.</li>
+                        <li>Minimización del impacto negativo en la operación y finanzas.</li>
+                        <li>Recuperación más rápida y eficiente de la normalidad operativa.</li>
+                        <li>Mejora en la resiliencia y capacidad de respuesta ante futuras crisis.</li>
+                        <li>Mayor confianza y lealtad por parte de clientes y empleados.</li>
                     </ul>
                 </div>
             </div>
@@ -609,23 +587,24 @@
     </div>
 
     <!-- Modal para Problema 3 -->
-    <div id="problem3Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('problem3Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="problem3Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">No te alcanza para pagar la nómina</h2>
+                <button onclick="closeModal('problem3Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">No te alcanza para pagar la nómina</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Gestión Financiera y Optimización de Recursos Humanos</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> La falta de recursos para cubrir la nómina puede desencadenar una crisis financiera seria, con riesgo de perder talento clave y una drástica disminución en la productividad.
                 </p>
 
                 <!-- Estrategias para Solucionar el Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Estrategias para Solucionar este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Análisis de Costos Laborales:</strong> Evaluar y optimizar los costos asociados al personal.</li>
@@ -636,7 +615,7 @@
                 </div>
 
                 <!-- Beneficios de Resolver Este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios de Resolver Este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Estabilidad financiera y operativa de la empresa.</li>
@@ -650,23 +629,24 @@
     </div>
 
     <!-- Modal para Problema 4 -->
-    <div id="problem4Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('problem4Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="problem4Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Necesitas automatizar tus procesos</h2>
+                <button onclick="closeModal('problem4Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Necesitas automatizar tus procesos</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Implementación de Tecnologías de Automatización</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> La automatización de procesos es esencial para mejorar la eficiencia, reducir errores y liberar tiempo para tareas estratégicas. Sin automatización, las empresas pueden enfrentarse a cuellos de botella y a una mayor carga de trabajo manual que limita su crecimiento.
                 </p>
 
                 <!-- Estrategias para Solucionar este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Estrategias para Solucionar este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Identificación de Procesos Clave:</strong> Detectar los procesos que se beneficiarán más de la automatización.</li>
@@ -677,7 +657,7 @@
                 </div>
 
                 <!-- Beneficios de Resolver Este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios de Resolver Este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Reducción de errores humanos y mejora en la precisión.</li>
@@ -691,23 +671,24 @@
     </div>
 
     <!-- Modal para Problema 5 -->
-    <div id="problem5Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('problem5Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="problem5Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Quieres reducir la nómina sin perder calidad</h2>
+                <button onclick="closeModal('problem5Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Quieres reducir la nómina sin perder calidad</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Optimización de Recursos Humanos y Presupuestos</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> Reducir la nómina sin comprometer la calidad del trabajo es un desafío que muchas empresas enfrentan. Este objetivo requiere una estrategia bien planificada para optimizar los recursos humanos y financieros sin afectar la productividad.
                 </p>
 
                 <!-- Estrategias para Solucionar este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Estrategias para Solucionar este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Evaluación de Roles y Responsabilidades:</strong> Analizar si hay redundancias o roles que puedan ser combinados.</li>
@@ -718,7 +699,7 @@
                 </div>
 
                 <!-- Beneficios de Resolver Este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios de Resolver Este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Reducción de costos operativos sin sacrificar la calidad.</li>
@@ -732,23 +713,24 @@
     </div>
 
     <!-- Modal para Problema 6 -->
-    <div id="problem6Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('problem6Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="problem6Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Faltan objetivos claros y procesos definidos</h2>
+                <button onclick="closeModal('problem6Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Faltan objetivos claros y procesos definidos</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Establecimiento de Metas y Estructuración de Procesos</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> La falta de objetivos claros y procesos bien definidos puede llevar a la desorganización, falta de dirección y baja motivación en el equipo. Es esencial establecer metas claras y estructurar los procesos para asegurar que todos los miembros del equipo estén alineados y trabajen hacia un mismo propósito.
                 </p>
 
                 <!-- Estrategias para Solucionar este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Estrategias para Solucionar este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Definición de Metas SMART:</strong> Establecer objetivos que sean Específicos, Medibles, Alcanzables, Relevantes y con Tiempo definido.</li>
@@ -759,7 +741,7 @@
                 </div>
 
                 <!-- Beneficios de Resolver Este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios de Resolver Este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Mejora en la organización y eficiencia operativa.</li>
@@ -773,23 +755,24 @@
     </div>
 
     <!-- Modal para Problema 7 -->
-    <div id="problem7Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('problem7Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="problem7Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">No sabes cómo integrar inteligencia artificial</h2>
+                <button onclick="closeModal('problem7Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">No sabes cómo integrar inteligencia artificial</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Integración de Inteligencia Artificial en Procesos Empresariales</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> La inteligencia artificial (IA) ofrece enormes oportunidades para mejorar la eficiencia, la toma de decisiones y la innovación en las empresas. Sin embargo, su integración puede ser desafiante sin el conocimiento y las herramientas adecuadas.
                 </p>
 
                 <!-- Estrategias para Solucionar este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Estrategias para Solucionar este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Evaluación de Necesidades:</strong> Identificar áreas específicas donde la IA puede aportar valor.</li>
@@ -800,7 +783,7 @@
                 </div>
 
                 <!-- Beneficios de Resolver Este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios de Resolver Este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Automatización de tareas repetitivas, liberando tiempo para actividades estratégicas.</li>
@@ -814,40 +797,41 @@
     </div>
 
     <!-- Modal para Problema 8 -->
-    <div id="problem8Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('problem8Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="problem8Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">No tienes claridad de tus flujos</h2>
+                <button onclick="closeModal('problem8Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Estás atravesando una crisis y necesitas soluciones urgentes</h2>
-                <p class="text-lg font-semibold text-gray-800 mb-4">Gestión de Crisis y Desarrollo de Soluciones Rápidas</p>
+            <div class="modal-body">
+                <p class="text-lg font-semibold text-gray-800 mb-4">Visualización y Optimización de Flujos de Trabajo</p>
                 <p class="text-gray-600 leading-relaxed">
-                    <strong>Descripción:</strong> Las crisis pueden surgir de diversas fuentes, como problemas financieros, desastres naturales, pandemias o conflictos internos. Manejar una crisis de manera efectiva es crucial para minimizar el impacto negativo y asegurar la supervivencia de la empresa.
+                    <strong>Descripción:</strong> La falta de claridad en los flujos de trabajo puede llevar a ineficiencias, errores y retrasos en las operaciones diarias. Sin una comprensión clara de cómo fluye el trabajo dentro de la empresa, es difícil identificar áreas de mejora o implementar cambios efectivos.
                 </p>
 
-                <!-- Estrategias para Solucionar este Problema -->
-                <div>
+                <!-- Estrategias para Solucionar el Problema -->
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Estrategias para Solucionar este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><strong>Planificación de Contingencia:</strong> Desarrollar planes de acción para diferentes escenarios de crisis.</li>
-                        <li><strong>Comunicación Efectiva:</strong> Establecer canales claros de comunicación interna y externa durante la crisis.</li>
-                        <li><strong>Análisis Rápido de Situación:</strong> Evaluar rápidamente la situación para tomar decisiones informadas.</li>
-                        <li><strong>Implementación de Soluciones Rápidas:</strong> Actuar de manera decisiva para mitigar los efectos de la crisis.</li>
+                        <li><strong>Mapeo de Procesos:</strong> Documentar y visualizar todos los procesos operativos para identificar ineficiencias.</li>
+                        <li><strong>Implementación de Herramientas de Gestión:</strong> Utilizar software de gestión de proyectos y flujos de trabajo.</li>
+                        <li><strong>Capacitación del Personal:</strong> Formar al equipo en las mejores prácticas para gestionar y optimizar los flujos de trabajo.</li>
+                        <li><strong>Revisión y Mejora Continua:</strong> Establecer ciclos de revisión periódicos para mejorar constantemente los procesos.</li>
                     </ul>
                 </div>
 
                 <!-- Beneficios de Resolver Este Problema -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios de Resolver Este Problema</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Minimización del impacto negativo en la operación y finanzas.</li>
-                        <li>Recuperación más rápida y eficiente de la normalidad operativa.</li>
-                        <li>Mejora en la resiliencia y capacidad de respuesta ante futuras crisis.</li>
-                        <li>Mayor confianza y lealtad por parte de clientes y empleados.</li>
+                        <li>Mayor eficiencia operativa y reducción de tiempos muertos.</li>
+                        <li>Mejora en la calidad del producto o servicio ofrecido.</li>
+                        <li>Aumento de la satisfacción del cliente.</li>
+                        <li>Facilidad para escalar y crecer sin perder control sobre las operaciones.</li>
                     </ul>
                 </div>
             </div>
@@ -855,23 +839,24 @@
     </div>
 
     <!-- Modal para Servicio 1 -->
-    <div id="service1Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('service1Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="service1Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Coaching Empresarial y Resolución de Crisis</h2>
+                <button onclick="closeModal('service1Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Coaching Empresarial y Resolución de Crisis</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Transformando Desafíos en Oportunidades</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> Nuestro servicio de Coaching Empresarial y Resolución de Crisis está diseñado para ayudar a las empresas a identificar y superar desafíos críticos. A través de un enfoque estratégico y personalizado, trabajamos junto a tu equipo para desarrollar soluciones efectivas que impulsen el crecimiento y la resiliencia.
                 </p>
 
                 <!-- Componentes del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Componentes del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Diagnóstico Empresarial:</strong> Evaluación integral de la situación actual de la empresa.</li>
@@ -882,7 +867,7 @@
                 </div>
 
                 <!-- Beneficios del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Mejora en la eficiencia operativa y financiera.</li>
@@ -896,23 +881,24 @@
     </div>
 
     <!-- Modal para Servicio 2 -->
-    <div id="service2Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('service2Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="service2Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Automatización y Optimización de Procesos</h2>
+                <button onclick="closeModal('service2Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Automatización y Optimización de Procesos</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Impulsando la Eficiencia mediante Tecnología</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> Nuestro servicio de Automatización y Optimización de Procesos está diseñado para transformar tus operaciones empresariales mediante la implementación de tecnologías avanzadas. Al automatizar tareas repetitivas y optimizar flujos de trabajo, ayudamos a tu empresa a reducir costos, minimizar errores y aumentar la productividad.
                 </p>
 
                 <!-- Componentes del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Componentes del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Análisis de Procesos:</strong> Identificación de áreas clave para la automatización.</li>
@@ -924,7 +910,7 @@
                 </div>
 
                 <!-- Beneficios del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Reducción significativa de costos operativos.</li>
@@ -939,23 +925,24 @@
     </div>
 
     <!-- Modal para Por qué elegirnos 1 -->
-    <div id="choose1Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('choose1Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="choose1Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Resultados garantizados</h2>
+                <button onclick="closeModal('choose1Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Resultados garantizados</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Compromiso con la Excelencia y la Eficacia</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> En Mentura, nos comprometemos a entregar resultados tangibles y medibles que impulsen el crecimiento y la eficiencia de tu empresa. Nuestra metodología probada y nuestro enfoque personalizado aseguran que cada solución implementada tenga un impacto positivo y duradero.
                 </p>
 
                 <!-- Componentes del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Componentes del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Metodología Probada:</strong> Utilizamos estrategias y técnicas que han demostrado ser efectivas en múltiples industrias.</li>
@@ -966,7 +953,7 @@
                 </div>
 
                 <!-- Beneficios del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Incremento en la rentabilidad y eficiencia operativa.</li>
@@ -980,23 +967,24 @@
     </div>
 
     <!-- Modal para Por qué elegirnos 2 -->
-    <div id="choose2Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('choose2Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="choose2Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Enfoque humano</h2>
+                <button onclick="closeModal('choose2Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Enfoque humano</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Prioridad al Bienestar y Desarrollo del Equipo</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> Creemos que el éxito empresarial está directamente relacionado con el bienestar y desarrollo de su equipo. Nuestro enfoque humano garantiza que cada miembro de tu organización se sienta valorado, motivado y empoderado para contribuir al crecimiento de la empresa.
                 </p>
 
                 <!-- Componentes del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Componentes del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Desarrollo del Talento:</strong> Programas de capacitación y desarrollo profesional para el equipo.</li>
@@ -1007,7 +995,7 @@
                 </div>
 
                 <!-- Beneficios del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Mejora en la moral y satisfacción del personal.</li>
@@ -1021,23 +1009,24 @@
     </div>
 
     <!-- Modal para Por qué elegirnos 3 -->
-    <div id="choose3Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('choose3Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="choose3Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Métricas</h2>
+                <button onclick="closeModal('choose3Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Métricas</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Indicadores para una Toma de Decisiones Informada</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> Las métricas son esenciales para evaluar el desempeño y el progreso hacia los objetivos empresariales. En Mentura, ayudamos a tu empresa a definir y monitorear las métricas clave que son cruciales para tu éxito.
                 </p>
 
                 <!-- Componentes del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Componentes del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Definición de KPIs:</strong> Identificación de los Indicadores Clave de Desempeño más relevantes para tu negocio.</li>
@@ -1048,7 +1037,7 @@
                 </div>
 
                 <!-- Beneficios del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Mejora en la toma de decisiones basada en datos concretos.</li>
@@ -1062,23 +1051,24 @@
     </div>
 
     <!-- Modal para Por qué elegirnos 4 -->
-    <div id="choose4Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('choose4Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="choose4Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Visibilidad</h2>
+                <button onclick="closeModal('choose4Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Visibilidad</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Claridad en el Potencial y Riesgos de tu Empresa</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> Tener una visión clara del estado actual y el potencial futuro de tu empresa es fundamental para tomar decisiones estratégicas. En Mentura, proporcionamos herramientas y análisis que aumentan la visibilidad de tus operaciones, permitiéndote identificar riesgos y oportunidades en tiempo real.
                 </p>
 
                 <!-- Componentes del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Componentes del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Dashboard de KPIs:</strong> Creación de paneles personalizados para monitorear métricas clave.</li>
@@ -1089,7 +1079,7 @@
                 </div>
 
                 <!-- Beneficios del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Mejora en la toma de decisiones estratégicas.</li>
@@ -1103,23 +1093,24 @@
     </div>
 
     <!-- Modal para Por qué elegirnos 5 -->
-    <div id="choose5Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('choose5Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="choose5Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Optimización</h2>
+                <button onclick="closeModal('choose5Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Optimización</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Maximización de Recursos y Minimización de Costos</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> La optimización de recursos es clave para mejorar la eficiencia y reducir costos operativos. En Mentura, te ayudamos a identificar y aprovechar al máximo los recursos disponibles, asegurando que cada inversión tenga el mayor retorno posible.
                 </p>
 
                 <!-- Componentes del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Componentes del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Análisis de Recursos:</strong> Evaluación detallada de los recursos actuales y su utilización.</li>
@@ -1130,7 +1121,7 @@
                 </div>
 
                 <!-- Beneficios del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Aumento de la eficiencia operativa y reducción de tiempos de ejecución.</li>
@@ -1144,23 +1135,24 @@
     </div>
 
     <!-- Modal para Por qué elegirnos 6 -->
-    <div id="choose6Modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
-        <div class="bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto modal-content">
-            <!-- Botón de Cierre -->
-            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none" onclick="closeModal('choose6Modal')">
-                <i data-feather="x" class="w-6 h-6"></i>
-            </button>
-
+    <div id="choose6Modal" class="fixed inset-0 hidden items-center justify-center modal-background z-50">
+        <div class="modal-content bg-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative max-h-screen overflow-y-auto">
+            <!-- Encabezado fijo -->
+            <div class="modal-header flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-custom-elegant">Simplificación</h2>
+                <button onclick="closeModal('choose6Modal')" aria-label="Cerrar" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
             <!-- Contenido del Modal -->
-            <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-custom-elegant mb-2">Simplificación</h2>
+            <div class="modal-body">
                 <p class="text-lg font-semibold text-gray-800 mb-4">Reducción de Complejidad y Mejora de la Usabilidad</p>
                 <p class="text-gray-600 leading-relaxed">
                     <strong>Descripción:</strong> La simplificación de procesos y estructuras empresariales facilita la operación diaria y mejora la experiencia tanto de los empleados como de los clientes. En Mentura, trabajamos para eliminar la complejidad innecesaria, permitiendo que tu empresa funcione de manera más fluida y efectiva.
                 </p>
 
                 <!-- Componentes del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Componentes del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li><strong>Mapeo de Procesos:</strong> Identificación de pasos redundantes o innecesarios.</li>
@@ -1171,7 +1163,7 @@
                 </div>
 
                 <!-- Beneficios del Servicio -->
-                <div>
+                <div class="mt-4">
                     <h3 class="text-xl font-bold text-custom-elegant mb-3">Beneficios del Servicio</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Mejora en la eficiencia operativa y reducción de tiempos de ejecución.</li>
